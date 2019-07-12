@@ -1,0 +1,25 @@
+{
+  "presets": [
+	[
+      "@babel/preset-env",{
+
+        "useBuiltIns": "usage",
+        "shippedProposals": true,
+        "corejs":3,
+        "modules": false,
+        "targets": "last 2 years"
+      }
+    ]
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-react-jsx", { "pragma":"h" }],
+  	"@babel/plugin-proposal-class-properties",
+    ["@babel/plugin-transform-runtime", {
+      "absoluteRuntime": false,
+      "corejs": 3,
+      "helpers": true,
+      "regenerator": true,
+      "useESModules": true
+    }]
+  ]
+}

@@ -1,0 +1,39 @@
+html, body {
+	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+}
+
+
+#app {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	display: grid;
+	grid-template-columns: [start] 25% [quarter] 25% [center] auto [end];
+	grid-template-rows: [start] 2rem [header] auto [footer] 2rem [end];
+
+	.avalue {
+		grid-column: start / quarter;
+		grid-row: start / header;
+		background: yellow;
+	}
+
+	.bvalue {
+		grid-column: quarter / center;
+		grid-row: start / header;
+	}
+
+	textarea {
+		grid-column: start / center;
+		grid-row: header / footer;
+	}
+
+	canvas {
+		grid-column: center / end;
+		grid-row: header / footer;
+	}
+
+}
+
